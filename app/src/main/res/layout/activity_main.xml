@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgroud">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        android:text="Task"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:fontFamily="cursive"
+        android:textSize="50sp"
+        android:textStyle="italic"/>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="30dp"
+        android:padding="10dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="2dp"
+        android:cacheColorHint="@color/white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Enter task here"
+            android:textColorHint="@color/white"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:maxLines="5"
+            android:gravity="center"
+            android:scrollbars="vertical"
+            android:lines="5"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText"
+            android:text="Add Task"
+            android:textColor="@color/white"
+            android:background="@drawable/circle_button"
+            android:padding="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+</LinearLayout>
