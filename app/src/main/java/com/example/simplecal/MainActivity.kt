@@ -1,7 +1,9 @@
 package com.example.simplecal
 
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.util.Log
+import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
@@ -14,12 +16,18 @@ class MainActivity : AppCompatActivity() {
     private var currentOperation: String = ""
     private val decimalFormat = DecimalFormat("#.##")
 
+    private fun applyPulseAnimation(button: Button) {
+        val pulseAnimation = AnimationUtils.loadAnimation(this, R.anim.glow_effect)
+        button.startAnimation(pulseAnimation)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         editTextResult = findViewById(R.id.editTextResult)
         Log.d("Calculator", "editTextResult initialized: $editTextResult")
+
 
         val button0 = findViewById<Button>(R.id.button0)
         val button1 = findViewById<Button>(R.id.button1)
@@ -37,7 +45,6 @@ class MainActivity : AppCompatActivity() {
         val buttonMultiply = findViewById<Button>(R.id.buttonMultiply)
         val buttonDivide = findViewById<Button>(R.id.buttonDivide)
         val buttonEquals = findViewById<Button>(R.id.buttonEquals)
-
         val buttonClear = findViewById<Button>(R.id.buttonClear)
 
         val numberButtons = listOf(
@@ -54,27 +61,64 @@ class MainActivity : AppCompatActivity() {
         )
         numberButtons.forEach { button ->
             button.setOnClickListener {
+                playButtonSound()
+                applyPulseAnimation(button)
                 editTextResult.append((it as Button).text)
             }
         }
 
         buttonDot.setOnClickListener {
+            playButtonSound()
+            applyPulseAnimation(buttonDot)
             if (!editTextResult.text.contains(".")) {
                 editTextResult.append(".")
             }
         }
 
-        buttonAdd.setOnClickListener { performOperation("+") }
-        buttonSubtract.setOnClickListener { performOperation("-") }
-        buttonMultiply.setOnClickListener { performOperation("*") }
-        buttonDivide.setOnClickListener { performOperation("/") }
-        buttonEquals.setOnClickListener { calculateResult() }
+        buttonAdd.setOnClickListener {
+            playButtonSound()
+            applyPulseAnimation(buttonAdd)
+            performOperation("+")
+        }
+        buttonSubtract.setOnClickListener {
+            playButtonSound()
+            applyPulseAnimation(buttonSubtract)
 
-        buttonClear.setOnClickListener {  // Add this listener
+            performOperation("-")
+        }
+        buttonMultiply.setOnClickListener {
+            playButtonSound()
+            applyPulseAnimation(buttonMultiply)
+
+            performOperation("*")
+        }
+        buttonDivide.setOnClickListener {
+            playButtonSound()
+            applyPulseAnimation(buttonDivide)
+
+            performOperation("/")
+        }
+        buttonEquals.setOnClickListener {
+            playButtonSound()
+            applyPulseAnimation(buttonEquals)
+            calculateResult()
+        }
+
+        buttonClear.setOnClickListener {
+            playButtonSound()
+            applyPulseAnimation(buttonClear)
             editTextResult.text.clear()
             operand1 = 0.0
             operand2 = 0.0
             currentOperation = ""
+        }
+    }
+
+    private fun playButtonSound() {
+        val mediaPlayer = MediaPlayer.create(this, R.raw.button_click)
+        mediaPlayer.start()
+        mediaPlayer.setOnCompletionListener {
+            it.release()
         }
     }
 
