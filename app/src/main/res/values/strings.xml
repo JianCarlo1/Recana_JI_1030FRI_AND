@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">NewsActivity</string>
+    <string name="news_image">News Image</string>
+
+</resources>
