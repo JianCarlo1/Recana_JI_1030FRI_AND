@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="@drawable/mixed_color_gradient"> <!-- RGB color in hex format -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"> <!-- Use weight to fill the space -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:gravity="center"> <!-- Center content in the inner LinearLayout -->
+
+            <ImageView
+                android:id="@+id/fragment_image"
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="Draconia Saga is an anime-themed game featuring an interactive multiplayer mode that connects players worldwide. This game allows you to capture pets, form teams, and embark on adventures."
+                android:src="@drawable/homescreen" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About the Game"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:gravity="center"/> <!-- Centered text in the title -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Here you can find more information about the dragon encounter and the choices you made in Draconia Saga."
+                android:textSize="16sp"
+                android:gravity="center" /> <!-- Centered text -->
+
+            <ImageView
+                android:id="@+id/fragment_image2"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="Draconia Saga is an anime-themed game featuring an interactive multiplayer mode that connects players worldwide. This game allows you to capture pets, form teams, and embark on adventures."
+                android:src="@drawable/overview" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Overview"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:gravity="center"/> <!-- Centered text in the title -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Draconia Saga incorporates exciting yet challenging levels packed with thrilling battles, dangerous dungeons, and various species of monsters."
+                android:textSize="16sp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center" /> <!-- Centered text -->
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
