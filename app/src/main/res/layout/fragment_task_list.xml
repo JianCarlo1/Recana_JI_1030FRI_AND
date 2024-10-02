@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="570dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:padding="10dp"
+        android:text="Task"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:fontFamily="cursive"
+        android:textSize="40sp"
+        android:textStyle="bold|italic"
+        android:layout_gravity="center"/>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="2dp"
+        android:cacheColorHint="@color/white"
+        tools:listitem="@layout/list_item_task"/>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter task here"
+        android:textColorHint="@color/black"
+        android:inputType="text"
+        android:lines="1"
+        android:gravity="center"
+        android:scrollbars="none"
+        android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Add Task"
+        android:textColor="@color/white"
+        android:background="@drawable/button"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"/>
+
+</LinearLayout>

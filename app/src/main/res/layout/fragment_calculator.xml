@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="570dp"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Calculator"
+        android:textSize="40sp"
+        android:textStyle="bold|italic"
+        android:layout_gravity="center"
+        android:fontFamily="cursive"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/editTextResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_gravity="center_horizontal"
+        android:focusable="false"
+        android:clickable="false"
+        android:lines="1"
+        android:textSize="40sp"
+        android:gravity="end"
+        android:hint="0"
+        android:background="@color/teal_700"/>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center_horizontal"
+        android:columnCount="4"
+        android:rowCount="5">
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="7"
+            android:textColor="#000000"
+            android:layout_margin="4dp"
+            android:background="@drawable/calculator_buttons" />
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="8"
+            android:textColor="#000000"
+            android:layout_margin="4dp"
+            android:background="@drawable/calculator_buttons" />
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="9"
+            android:textColor="#000000"
+            android:layout_margin="4dp"
+            android:background="@drawable/calculator_buttons" />
+        <Button
+            android:id="@+id/buttonDivide"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="/"
+            android:textColor="#000000"
+            android:layout_margin="4dp"
+            android:background="@drawable/calculator_buttons1" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="4"
+            android:textColor="#000000"
+            android:layout_margin="4dp"
+            android:background="@drawable/calculator_buttons" />
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="5"
+            android:textColor="#000000"
+            android:layout_margin="4dp"
+            android:background="@drawable/calculator_buttons" />
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="6"
+            android:textColor="#000000"
+            android:layout_margin="4dp"
+            android:background="@drawable/calculator_buttons" />
+        <Button
+            android:id="@+id/buttonMultiply"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="*"
+            android:textColor="#000000"
+            android:layout_margin="4dp"
+            android:background="@drawable/calculator_buttons1" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="1"
+            android:textColor="#000000"
+            android:layout_margin="4dp"
+            android:background="@drawable/calculator_buttons" />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="2"
+            android:textColor="#000000"
+            android:layout_margin="4dp"
+            android:background="@drawable/calculator_buttons" />
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="3"
+            android:textColor="#000000"
+            android:layout_margin="4dp"
+            android:background="@drawable/calculator_buttons" />
+        <Button
+            android:id="@+id/buttonSubtract"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="-"
+            android:textColor="#000000"
+            android:layout_margin="4dp"
+            android:background="@drawable/calculator_buttons1" />
+        <Button
+            android:id="@+id/button0"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="0"
+            android:textColor="#000000"
+            android:layout_margin="4dp"
+            android:background="@drawable/calculator_buttons" />
+        <Button
+            android:id="@+id/buttonDot"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="."
+            android:textColor="#000000"
+            android:layout_margin="4dp"
+            android:background="@drawable/calculator_buttons1" />
+        <Button
+            android:id="@+id/buttonEquals"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="="
+            android:textColor="#000000"
+            android:layout_margin="4dp"
+            android:background="@drawable/calculator_buttons1" />
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="+"
+            android:textColor="#000000"
+            android:layout_margin="4dp"
+            android:background="@drawable/calculator_buttons1" />
+
+        <Button
+            android:id="@+id/buttonClear"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="C"
+            android:backgroundTint="#FF6666"
+            android:layout_margin="4dp"
+            android:background="#f3faa7" />
+
+    </GridLayout>
+</LinearLayout>

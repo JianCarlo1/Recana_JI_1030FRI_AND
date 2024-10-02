@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <style name="BottomNavigation" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">#3df007</item>
+        <item name="colorPrimaryDark">#FF000000</item>
+        <item name="colorAccent">#e63535</item>
+
+        <item name="itemTextColor">@color/white</item>
+        <item name="itemIconTint">@color/white</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+</resources>
+
+
+
